@@ -79,6 +79,7 @@ SDL_GPUShader *LoadShader(
 }
 
 int main(){
+    atexit(SDL_Quit);
     if(!SDL_Init(SDL_INIT_VIDEO))
         throw SDL_Exception("SDL_Init failed!");
 
@@ -88,7 +89,7 @@ int main(){
     if(!window)
         throw SDL_Exception("SDL_CreateWindow failed!");
 
-    SDL_GPUDevice* device =  SDL_CreateGPUDevice(SDL_GPU_SHADERFORMAT_DXIL, true, nullptr);
+    SDL_GPUDevice* device =  SDL_CreateGPUDevice(SDL_GPU_SHADERFORMAT_SPIRV, true, nullptr);
     if(!device)
         throw SDL_Exception("SDL_CreateGPUDevice failed!");
 
@@ -165,7 +166,5 @@ int main(){
         if (!SDL_SubmitGPUCommandBuffer(commandBuffer))
             throw SDL_Exception("SDL_SubmitGPUCommandBuffer failed!");
     }
-
-    SDL_QuitSubSystem(SDL_INIT_VIDEO);
     return EXIT_SUCCESS;
 }
