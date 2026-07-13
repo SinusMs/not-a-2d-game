@@ -5,20 +5,20 @@
             "name": "debug",
             "displayName": "debug preset",
             "generator": "Ninja",
-            "binaryDir": "${workspaceFolder}/build/${presetName}",
+            "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/install/${presetName}"
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
             }
         },
         {
             "name": "release",
             "displayName": "release preset",
             "generator": "Ninja",
-            "binaryDir": "${workspaceFolder}/build/${presetName}",
+            "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/install/${presetName}"
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
             }
         }
     ],
