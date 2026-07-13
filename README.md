@@ -11,5 +11,6 @@
    libpipewire-0.3-dev libwayland-dev libdecor-0-dev liburing-dev
    ```
    ```
-2. Run `cmake --build --preset debug`
-3. The compiled executable can be found in `build/debug/bin/NotA2DGame`
+2. Run `cmake --build --preset default`
+3. The compiled executable can be found in `build/bin/NotA2DGame`
+4. Optional: clangd setup https://clangd.llvm.org/installation

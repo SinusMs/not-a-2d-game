@@ -2,50 +2,20 @@
     "version": 8,
     "configurePresets": [
         {
-            "name": "debug",
-            "displayName": "debug preset",
+            "name": "default",
+            "displayName": "default preset",
             "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build/${presetName}",
+            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
-            }
-        },
-        {
-            "name": "release",
-            "displayName": "release preset",
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
             }
         }
     ],
     "buildPresets": [
         {
-            "name": "debug",
-            "configurePreset": "debug"
-        },
-        {
-            "name": "release",
-            "configurePreset": "release"
-        }
-    ],
-    "testPresets": [
-        {
-            "name": "debug",
-            "configurePreset": "debug",
-            "output": {
-                "outputOnFailure": true
-            }
-        },
-        {
-            "name": "release",
-            "configurePreset": "release",
-            "output": {
-                "outputOnFailure": true
-            }
+            "name": "default",
+            "configurePreset": "default"
         }
     ]
 }
