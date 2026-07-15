@@ -110,8 +110,13 @@ list(APPEND LIBS glm::glm)
 
 
 ## Executables
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} 
+  src/main.cpp
+  src/shaderUtils.cpp
+)
+target_include_directories(${PROJECT_NAME} PRIVATE src)
+
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${LIBS})
 
-file(COPY Content DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+file(COPY shaders DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
