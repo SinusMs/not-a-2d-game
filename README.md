@@ -11,7 +11,8 @@ WIP prototype for a game written in C++ using SDL3
    libxkbcommon-dev libdrm-dev libgbm-dev libgl1-mesa-dev libgles2-mesa-dev \
    libegl1-mesa-dev libdbus-1-dev libibus-1.0-dev libudev-dev libthai-dev \
    libpipewire-0.3-dev libwayland-dev libdecor-0-dev liburing-dev
+2. Initialize with `cmake --preset default`
    ```
-2. Run `cmake --build --preset default`
+2. Build with `cmake --build --preset default`
 3. The compiled executable can be found in `build/bin/NotA2DGame`
 4. Optional: clangd setup https://clangd.llvm.org/installation
