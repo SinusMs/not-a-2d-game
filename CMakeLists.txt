@@ -113,6 +113,7 @@ list(APPEND LIBS glm::glm)
 add_executable(${PROJECT_NAME} 
   src/main.cpp
   src/shaderUtils.cpp
+  src/renderer.cpp
 )
 target_include_directories(${PROJECT_NAME} PRIVATE src)
 
